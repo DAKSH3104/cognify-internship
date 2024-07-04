@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        var c=1;
+        var d=1;
+        function changecolor()
+        {
+            var getid=document.getElementById("btn");
+            if(c==1)
+            {
+                getid.style.backgroundColor="coral";
+                c=0;
+            }
+            else
+            {
+                getid.style.backgroundColor="purple";
+                c=1;
+            }
+            return false;
+        }
+        function wish()
+        {
+          
+                const time=new Date();
+                var hour=time.getHours();
+                var min=time.getMinutes();
+                if(hour <12)
+                    alert("Good Morning"+"\n Time:"+hour+":"+min);
+                else if(hour>=12 && hour<16)
+                    alert("Good After Noon"+"\nTime:"+hour+":"+min);
+                else if(hour>=16 && hour<21)
+                    alert("Good Evening"+"\nTime:"+hour+":"+min);
+                else
+                    alert("Good Night"+"\nTime:"+hour+":"+min);
+        
+        }
+        function calculator()
+        {
+                var a = parseFloat(document.getElementById("num1").value);
+                var b = parseFloat(document.getElementById("num2").value);
+                var result = a + b;
+                document.getElementById("res").value = result;
+
+        }
+    </script>
+</head>
+    <body>
+        <style type="text/css">
+            body{
+                background: linear-gradient(to right, black, grey);;
+            }
+            .c1{
+                 input[type="button"]
+                    {
+                        margin-left: 40%;
+                        width: 25%;
+                        padding: 15px 20px 15px 20px;
+                        background-color: #007bff;
+                        border-radius: 20px;
+
+                    }
+            }
+            .c2{
+                input[type="button"]
+                    {
+                        margin-left: 37%;
+                        width: 30%;
+                        padding: 15px 20px 15px 20px;
+                        background-color: aqua;
+                        border-radius: 15px;
+
+                    }
+            }
+            .c3{
+                table{
+                    background-color:gray;
+                    margin-left: 38%;
+                    width:400px;
+                    height:500px;
+                    border-color: black;
+                    border-width: 7px;
+                }
+                
+                 input[type="button"]
+                    {
+                        width: 100%;
+                        height: 70%;
+                        padding: 12px 20px;
+                        background-color: orange;
+                        border-radius: 20px;
+
+                    }
+                    input[type="text"]
+                    {
+                        width: 100%;
+                        height: 100%;
+                        padding: 12px 20px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        background-color:black ;
+                        color: white;
+                        font-size:25px;
+                    }
+                     input[type="number"]
+                    {
+                        width: 100%;
+                        height: 50%;
+                        padding: 12px 20px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        background-color:lightgrey ;
+                    }
+            }
+        </style>
+        <form id="f1">
+            <div class="c1">
+                    <input type="button" value="CHANGE COLOR!" id="btn" onclick="return changecolor()"><br><br>
+            </div>
+            <div class="c2">
+                    <input type="button" value="GREETINGS" onclick="return wish()"><br><br>
+            </div>
+            <div class="c3">
+                    <center><h1><u>CALCULATOR</u></h1></center>
+                <table border="1">
+                    <tr>
+                        <td><input type="text" id="res" disabled placeholder="RESULT"></td>
+                     </tr>
+                    <tr>
+                        <td> <input type="number" id="num1" placeholder="ENTER THE FIRST NUMBER"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="num2" placeholder="ENTER THE SECOND NUMBER"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button"  value="ADD"  onclick="calculator()"></td>
+                    </tr>
+              </table>
+            </div>
+        </form>
+    </body>
+</html>

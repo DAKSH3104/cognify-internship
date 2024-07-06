@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage with Images</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #e10946;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #333;
+      padding: 10px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    nav a:hover {
+            background-color: #555;
+        }
+
+
+    .content img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    /* Mobile-friendly navigation */
+    @media screen and (max-width: 600px) {
+      .nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav a {
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+
+      nav a:hover {
+            background-color: #555;
+        }
+
+      nav menu {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        margin-right: 10px;
+        }
+
+      .hamburger {
+        display: block;
+        text-align: right;
+        cursor: pointer;
+        margin: 10px;
+      }
+
+      .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
+
+      .menu {
+        display: none;
+        margin-right: 20px;
+      }
+
+      .menu.show {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Internship courses offered</h1>
+  </header>
+
+  <div class="nav">
+    <div class="menu">
+      <a href="#">Home </a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <section class="content">
+    <h2>Welcome to Daksh's responsive webpage!</h2>
+    <p>This webpage adapts to different screen sizes and includes a mobile-friendly navigation menu.</p>
+
+    <img src="https://media.licdn.com/dms/image/D5612AQE4Lhzeu-Yc3g/article-cover_image-shrink_720_1280/0/1698995535329?e=2147483647&v=beta&t=caj-Vh1eF-3z94l5YKZxZZTZWqTLPs4lBEEm23ZXAUU" alt="Placeholder Image 1">
+    <img src="https://media.cloudbooklet.com/uploads/2023/02/25072508/Build-a-Successful-Career-in-Data-Science_-Essential-Skills-and-Tips.jpg" alt="Placeholder Image 2">
+    <img src="https://media.licdn.com/dms/image/D4E12AQFW1dqLQPVE-Q/article-cover_image-shrink_600_2000/0/1670511843861?e=2147483647&v=beta&t=IUZVILXubjY_spgPfdmQYq6uJmhPCrajh9EiLlxWhmQ" alt="Placeholder Image 3">
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector('.menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+<Daksh Sharma>
+  <p>Contact us for inquiries: <a href="mailto:info@cognifyztech.com">info@cognifyztech.com</a></p>
+</Daksh Sharma>
+
+</body>
+</html>
